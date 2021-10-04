@@ -1,0 +1,101 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/4/2021 12:07:19 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-DS829OU"
+  DTS:CreatorName="DESKTOP-DS829OU\00517"
+  DTS:DTSID="{6B0A18C7-CE36-4926-ACF6-6D595DC785DC}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="1"
+  DTS:VersionGUID="{43D53F38-D27E-4130-ADF9-F659A251D843}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones HTTP]"
+      DTS:CreationName="HTTP"
+      DTS:DTSID="{2FE2C9B9-95DE-4724-8784-E0D4A1CC4DF8}"
+      DTS:ObjectName="Administrador de conexiones HTTP">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="http://localhost:60184/Service1.svc?wsdl">
+          <DTS:HttpConnection
+            DTS:ServerURL="http://localhost:60184/Service1.svc?wsdl">
+            <DTS:Property
+              DTS:Name="ServerPassword"
+              Sensitive="1"
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAM2vtcI7RmUu54riE3HMtKQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACa+9yhwEhH7slUBQ3RlL/SEnxqTU6V6S5KIdBEjziw/wAAAAAOgAAAAAIAACAAAABqUf1bR5z0uRi8IJREUYS0D2YjRHJMfa+SeZkHtmSO3BAAAADcCRrkZ3Y79SiIrOxW41/mQAAAACHKu9E9e9MfgrE30ayKJXQg7pdcUlzlFmQD+WJ12KnugZFEbIRDBYtszjiRB3uslP3HtFvpVFNlyaGItdnustI</DTS:Property>
+            <DTS:Property
+              DTS:Name="ProxyPassword"
+              Sensitive="1"
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAM2vtcI7RmUu54riE3HMtKQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADbqCQoDv94ab3bf7DbLdXrcpE6UXyueTrR0dwdWIi3dwAAAAAOgAAAAAIAACAAAADZ3yT91DJCphG5YpLMceYU1aOdwkQgRo+Mp2Ij7c6pjhAAAAC7LmTQO+Ggg3ZNkq28Oxu4QAAAAJ2eMAn4fUA92fjhQfaYr2PjcFxtja/u7K0H5pxXbHm493bP255lDpp36D/awIgOa+I7jmrvqgnIKZIQQuDxEJw</DTS:Property>
+          </DTS:HttpConnection>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[webservice.wsdl.txt]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{8C830AB0-99BE-4686-8DB4-16F29EBEC4E3}"
+      DTS:ObjectName="webservice.wsdl.txt">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Users\00517\Desktop\webservice.wsdl.txt" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Servicio Web"
+      DTS:CreationName="Microsoft.WebServiceTask"
+      DTS:Description="Tarea Servicio Web"
+      DTS:DTSID="{28E8E946-73BB-4E2C-87F9-3AC561C9C586}"
+      DTS:ExecutableType="Microsoft.WebServiceTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Servicio Web"
+      DTS:TaskContact="Web Service Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <WSTask:WebServiceTaskData
+          WSTask:ConnectionName="{2FE2C9B9-95DE-4724-8784-E0D4A1CC4DF8}"
+          WSTask:Service="Service1"
+          WSTask:WSDLFile="C:\Users\00517\Desktop\webServices.wsdl"
+          WSTask:OverwriteWSDLFile="True"
+          WSTask:OutputLocation="webservice.wsdl.txt" xmlns:WSTask="www.microsoft.com/sqlserver/dts/tasks/webservicetask">
+          <WSTask:MethodInfo
+            WSTask:MethodName="GetCasas"
+            WSTask:MessageName="">
+            <WSTask:Documentation></WSTask:Documentation>
+          </WSTask:MethodInfo>
+        </WSTask:WebServiceTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="175,42"
+          Id="Package\Tarea Servicio Web"
+          TopLeft="355,154" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

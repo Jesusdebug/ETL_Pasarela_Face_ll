@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "ETL_Pasarela_Face_ll", "ETL_Pasarela_Face_ll\ETL_Pasarela_Face_ll.dtproj", "{3D7FA256-8F4C-4603-9EE2-5D11DD2486C2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PAYU", "PAYU", "{DC3484D9-303F-4369-9363-6D82F4FC024C}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "ApiPayu", "ApiPayu\ApiPayu.dtproj", "{CB0236F3-49A0-45D8-ADBF-1EE2BE46E6E6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebServieWCF", "WebServieWCF", "{8678E607-E909-4A97-A62C-BDCFE712A30D}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "ETL_Pasarela_Face_ll.WebServiceSSIS_Casa", "ETL_Pasarela_Face_ll.WebServiceSSIS_Casa\ETL_Pasarela_Face_ll.WebServiceSSIS_Casa.dtproj", "{68D14C87-106E-4926-A5D2-6B8054662634}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D7FA256-8F4C-4603-9EE2-5D11DD2486C2}.Development|Default.ActiveCfg = Development
+		{3D7FA256-8F4C-4603-9EE2-5D11DD2486C2}.Development|Default.Build.0 = Development
+		{CB0236F3-49A0-45D8-ADBF-1EE2BE46E6E6}.Development|Default.ActiveCfg = Development
+		{CB0236F3-49A0-45D8-ADBF-1EE2BE46E6E6}.Development|Default.Build.0 = Development
+		{68D14C87-106E-4926-A5D2-6B8054662634}.Development|Default.ActiveCfg = Development
+		{68D14C87-106E-4926-A5D2-6B8054662634}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CB0236F3-49A0-45D8-ADBF-1EE2BE46E6E6} = {DC3484D9-303F-4369-9363-6D82F4FC024C}
+		{68D14C87-106E-4926-A5D2-6B8054662634} = {8678E607-E909-4A97-A62C-BDCFE712A30D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7B09B6A6-ED47-44E6-8DBB-0A0CE926AB0A}
+	EndGlobalSection
+EndGlobal
